@@ -72,7 +72,7 @@ nav {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--yellow); color: var(--navy);
   font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 14px 28px; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+  padding: 14px 28px; border: none; cursor: pointer; transition: all 0.2s;
 }
 .btn-primary:hover { background: #e6b800; transform: translateY(-2px); }
 .btn-outline {
@@ -83,9 +83,7 @@ nav {
 }
 .btn-outline:hover { border-color: var(--yellow); color: var(--yellow); }
 
-.hero-stats {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 40px 32px;
-}
+.hero-stats { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 40px 32px; }
 .stat-item { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.06); }
 .stat-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 52px; color: var(--yellow); line-height: 1; }
@@ -109,91 +107,39 @@ nav {
   display: flex; align-items: center; gap: 10px;
 }
 .section-tag::after { content: ''; flex: 0 0 40px; height: 1px; background: var(--blue-mid); }
-.section-title {
-  font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 56px);
-  letter-spacing: 2px; color: var(--navy); margin-bottom: 48px; line-height: 1;
-}
-
-/* VALUE PROP */
-.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--border); }
-.value-card {
-  padding: 36px 28px; border-right: 1px solid var(--border);
-  position: relative; overflow: hidden; transition: all 0.2s;
-}
-.value-card:last-child { border-right: none; }
-.value-card:hover { background: var(--navy); }
-.value-card:hover .value-title, .value-card:hover .value-desc { color: var(--white); }
-.value-card:hover .value-icon { color: var(--yellow); }
-.value-num {
-  font-family: 'Bebas Neue', sans-serif; font-size: 72px; color: var(--border);
-  line-height: 1; position: absolute; top: 16px; right: 20px;
-  transition: color 0.2s;
-}
-.value-card:hover .value-num { color: rgba(245,197,24,0.15); }
-.value-icon { font-size: 28px; color: var(--blue); margin-bottom: 16px; transition: color 0.2s; }
-.value-title { font-size: 17px; font-weight: 700; margin-bottom: 10px; transition: color 0.2s; }
-.value-desc { font-size: 13px; color: var(--muted); line-height: 1.7; transition: color 0.2s; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 56px); letter-spacing: 2px; color: var(--navy); margin-bottom: 48px; line-height: 1; }
 
 .skills-section { background: var(--off); }
 .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.skill-card {
-  background: var(--white); border: 1px solid var(--border); padding: 28px;
-  transition: all 0.2s; border-top: 3px solid transparent;
-}
+.skill-card { background: var(--white); border: 1px solid var(--border); padding: 28px; transition: all 0.2s; border-top: 3px solid transparent; }
 .skill-card:hover { border-top-color: var(--blue); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
 .skill-icon { font-size: 24px; color: var(--blue); margin-bottom: 12px; }
 .skill-name { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
 .skill-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-/* PROJECTS */
 .projects-grid { display: flex; flex-direction: column; gap: 24px; }
-.project-card {
-  border: 1px solid var(--border); transition: all 0.2s; overflow: hidden;
-}
+.project-card { border: 1px solid var(--border); transition: all 0.2s; overflow: hidden; }
 .project-card:hover { border-color: var(--blue); box-shadow: 0 4px 20px rgba(26,79,214,0.08); }
-.project-header {
-  display: grid; grid-template-columns: 80px 1fr;
-}
-.project-num {
-  background: var(--navy); color: var(--yellow);
-  font-family: 'Bebas Neue', sans-serif; font-size: 32px;
-  display: flex; align-items: center; justify-content: center;
-  letter-spacing: 4px; padding: 28px 0; min-height: 100px;
-}
+.project-header { display: grid; grid-template-columns: 80px 1fr; }
+.project-num { background: var(--navy); color: var(--yellow); font-family: 'Bebas Neue', sans-serif; font-size: 32px; display: flex; align-items: center; justify-content: center; letter-spacing: 4px; padding: 28px 0; min-height: 100px; }
 .project-body { padding: 24px 28px; }
 .project-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 11px; color: var(--muted); margin-bottom: 8px; font-family: 'Space Mono', monospace; }
-.project-value {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--yellow-light); color: #92400e;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
-  padding: 4px 12px; margin-bottom: 10px;
-}
+.project-value { display: inline-flex; align-items: center; gap: 6px; background: var(--yellow-light); color: #92400e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; padding: 4px 12px; margin-bottom: 10px; }
 .project-title { font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--navy); }
 .project-desc { font-size: 13px; color: var(--muted); margin-bottom: 12px; line-height: 1.6; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-.p-tag {
-  font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  background: var(--card); color: var(--muted); padding: 4px 10px; border: 1px solid var(--border);
-}
-
-/* Photo gallery */
-.photo-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.photo-thumb {
-  aspect-ratio: 4/3; overflow: hidden; cursor: pointer; position: relative;
-}
-.photo-thumb img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.3s; filter: brightness(0.9);
-}
+.p-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--card); color: var(--muted); padding: 4px 10px; border: 1px solid var(--border); }
+.photo-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 16px; background: #f8fafc; border-top: 1px solid var(--border); }
+.photo-thumb { aspect-ratio: 4/3; overflow: hidden; cursor: pointer; }
+.photo-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; filter: brightness(0.9); }
 .photo-thumb:hover img { transform: scale(1.05); filter: brightness(1); }
 
-/* Lightbox */
 .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 1000; align-items: center; justify-content: center; }
 .modal.active { display: flex; }
 .modal-content { max-width: 90vw; max-height: 90vh; text-align: center; }
 .modal-content img { max-width: 100%; max-height: 80vh; object-fit: contain; }
 .modal-caption { color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 12px; }
-.modal-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 32px; cursor: pointer; line-height: 1; }
+.modal-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 32px; cursor: pointer; }
 
 .exp-section { background: var(--navy); }
 .exp-section .section-title { color: var(--white); }
@@ -217,17 +163,6 @@ nav {
 .cert-name { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
 .cert-body { font-size: 12px; color: var(--muted); }
 
-.cv-section { background: var(--yellow); padding: 80px 60px; text-align: center; }
-.cv-section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 3px; color: var(--navy); margin-bottom: 12px; }
-.cv-section p { color: rgba(10,22,40,0.6); margin-bottom: 32px; font-size: 15px; }
-.btn-dark {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--navy); color: var(--yellow);
-  font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 16px 36px; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
-}
-.btn-dark:hover { background: #0f1e38; transform: translateY(-2px); }
-
 .contact-section { background: var(--navy); padding: 60px; }
 .contact-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px; }
 .contact-left { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 2px; color: var(--white); }
@@ -235,6 +170,7 @@ nav {
 .contact-links { display: flex; gap: 20px; flex-wrap: wrap; }
 .contact-link { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.12); transition: all 0.2s; }
 .contact-link:hover { border-color: var(--yellow); color: var(--yellow); }
+.contact-link button { background: none; border: none; color: inherit; font: inherit; cursor: pointer; display: flex; align-items: center; gap: 8px; }
 
 footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px; color: rgba(255,255,255,0.2); font-family: 'Space Mono', monospace; }
 
@@ -247,13 +183,13 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
 
 @media (max-width: 768px) {
   nav { padding: 0 20px; }
+  .nav-links { gap: 16px; }
   .hero { padding: 100px 20px 60px; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .section { padding: 60px 20px; }
   .impact-band { padding: 40px 20px; }
   .impact-grid { grid-template-columns: 1fr 1fr; }
-  .skills-grid, .value-grid, .cert-grid { grid-template-columns: 1fr; }
-  .cv-section { padding: 60px 20px; }
+  .skills-grid, .cert-grid { grid-template-columns: 1fr; }
   .contact-section { padding: 40px 20px; }
   .contact-inner { flex-direction: column; }
   .photo-gallery { grid-template-columns: 1fr 1fr; }
@@ -275,32 +211,19 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-content">
+    <div>
       <div class="hero-label">Civil Engineer · Infrastructure Specialist</div>
       <h1>DINAR<br>FAISAL<br><span class="accent">RAMADHAN</span></h1>
       <p class="hero-desc">13 years building Jakarta's critical infrastructure — from flyovers and underpasses to flood control systems. Rp 956 Billion+ in project portfolio, delivered on time and on budget.</p>
       <div class="hero-cta">
-        <button class="btn-primary" onclick="downloadCV()">
-          <i class="fas fa-file-pdf"></i> Download CV
-        </button>
-        <a href="#projects" class="btn-outline">
-          <i class="fas fa-hard-hat"></i> View Projects
-        </a>
+        <button class="btn-primary" onclick="downloadCV()"><i class="fas fa-file-pdf"></i> Download CV</button>
+        <a href="#projects" class="btn-outline"><i class="fas fa-hard-hat"></i> View Projects</a>
       </div>
     </div>
     <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">13<span class="stat-unit">+</span></div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">Rp956<span class="stat-unit">B+</span></div>
-        <div class="stat-label">Total Project Value</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">5<span class="stat-unit">+</span></div>
-        <div class="stat-label">Major Projects</div>
-      </div>
+      <div class="stat-item"><div class="stat-num">13<span class="stat-unit">+</span></div><div class="stat-label">Years Experience</div></div>
+      <div class="stat-item"><div class="stat-num">Rp956<span class="stat-unit">B+</span></div><div class="stat-label">Total Project Value</div></div>
+      <div class="stat-item"><div class="stat-num">5<span class="stat-unit">+</span></div><div class="stat-label">Major Projects</div></div>
     </div>
   </div>
 </section>
@@ -310,27 +233,13 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
   <div class="impact-inner">
     <div class="impact-label">// Key Impact Numbers</div>
     <div class="impact-grid">
-      <div class="impact-card">
-        <div class="impact-val">Rp 287B</div>
-        <div class="impact-desc">Busway Flyover<br>Kapten Tendean – Ciledug</div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-val">Rp 207B</div>
-        <div class="impact-desc">Pintu Air Manggarai & Karet<br>Normalisasi Kali Ciliwung</div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-val">Rp 180B</div>
-        <div class="impact-desc">Peningkatan Jalan<br>Sudirman – Thamrin</div>
-      </div>
-      <div class="impact-card">
-        <div class="impact-val">10-20</div>
-        <div class="impact-desc">Team Members<br>Coordinated per Project</div>
-      </div>
+      <div class="impact-card"><div class="impact-val">Rp 287B</div><div class="impact-desc">Busway Flyover<br>Kapten Tendean – Ciledug</div></div>
+      <div class="impact-card"><div class="impact-val">Rp 207B</div><div class="impact-desc">Pintu Air Manggarai & Karet<br>Normalisasi Kali Ciliwung</div></div>
+      <div class="impact-card"><div class="impact-val">Rp 180B</div><div class="impact-desc">Peningkatan Jalan<br>Sudirman – Thamrin</div></div>
+      <div class="impact-card"><div class="impact-val">10-20</div><div class="impact-desc">Team Members<br>Coordinated per Project</div></div>
     </div>
   </div>
 </div>
-
-
 
 <!-- SKILLS -->
 <section class="section skills-section">
@@ -338,36 +247,12 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
     <div class="section-tag">Expertise</div>
     <div class="section-title">CORE SKILLS</div>
     <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
-        <div class="skill-name">Technical Drafting</div>
-        <div class="skill-desc">Shop Drawing, As-Built Drawing, Working Method Drawing menggunakan AutoCAD 2D dan SketchUp 3D.</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-hard-hat"></i></div>
-        <div class="skill-name">Construction Supervision</div>
-        <div class="skill-desc">Site inspection, quality control, compliance terhadap design specification dan safety standards.</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-tasks"></i></div>
-        <div class="skill-name">Project Management</div>
-        <div class="skill-desc">Koordinasi tim 10–20 orang, multi-stakeholder management, dan delivery on time & on budget.</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-calculator"></i></div>
-        <div class="skill-name">Quantity Surveying & Estimating</div>
-        <div class="skill-desc">Estimasi biaya, quantity surveying, dan material planning untuk proyek infrastruktur skala besar.</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-water"></i></div>
-        <div class="skill-name">Water Resources Engineering</div>
-        <div class="skill-desc">Certified Young Expert — pengalaman langsung di proyek normalisasi sungai dan pintu air berskala nasional.</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-file-contract"></i></div>
-        <div class="skill-name">Technical Documentation</div>
-        <div class="skill-desc">Method statement, as-built documentation, technical reporting, dan koordinasi dengan konsultan pengawas.</div>
-      </div>
+      <div class="skill-card"><div class="skill-icon"><i class="fas fa-drafting-compass"></i></div><div class="skill-name">Technical Drafting</div><div class="skill-desc">Shop Drawing, As-Built Drawing, Working Method Drawing menggunakan AutoCAD 2D dan SketchUp 3D.</div></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fas fa-hard-hat"></i></div><div class="skill-name">Construction Supervision</div><div class="skill-desc">Site inspection, quality control, compliance terhadap design specification dan safety standards.</div></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fas fa-tasks"></i></div><div class="skill-name">Project Management</div><div class="skill-desc">Koordinasi tim 10–20 orang, multi-stakeholder management, delivery on time & on budget.</div></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fas fa-calculator"></i></div><div class="skill-name">Quantity Surveying & Estimating</div><div class="skill-desc">Estimasi biaya, quantity surveying, dan material planning untuk proyek infrastruktur skala besar.</div></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fas fa-water"></i></div><div class="skill-name">Water Resources Engineering</div><div class="skill-desc">Certified Young Expert — pengalaman langsung di proyek normalisasi sungai dan pintu air berskala nasional.</div></div>
+      <div class="skill-card"><div class="skill-icon"><i class="fas fa-file-contract"></i></div><div class="skill-name">Technical Documentation</div><div class="skill-desc">Method statement, as-built documentation, technical reporting, dan koordinasi dengan konsultan pengawas.</div></div>
     </div>
   </div>
 </section>
@@ -383,24 +268,17 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
         <div class="project-header">
           <div class="project-num">01</div>
           <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fas fa-map-marker-alt"></i> Jakarta</span>
-              <span><i class="fas fa-calendar"></i> 2013–2015</span>
-              <span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span>
-            </div>
+            <div class="project-meta"><span><i class="fas fa-map-marker-alt"></i> Jakarta</span><span><i class="fas fa-calendar"></i> 2013–2015</span><span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span></div>
             <div class="project-value"><i class="fas fa-coins"></i> Rp 207.199.987.000</div>
             <div class="project-title">Pembangunan Pintu Air Manggarai & Karet — Normalisasi Kali Ciliwung</div>
-            <div class="project-desc">Proyek normalisasi sungai Ciliwung dengan metode Jacking Box Culvert (Manggarai) dan Open Cut (Karet) dilengkapi railway safety system. Salah satu proyek flood control terbesar di Jakarta.</div>
-            <div class="project-tags">
-              <span class="p-tag">Jacking Box Culvert</span><span class="p-tag">Open Cut</span>
-              <span class="p-tag">Railway Safety</span><span class="p-tag">Flood Control</span>
-            </div>
+            <div class="project-desc">Proyek normalisasi sungai Ciliwung dengan metode Jacking Box Culvert (Manggarai) dan Open Cut (Karet). Salah satu proyek flood control terbesar di Jakarta.</div>
+            <div class="project-tags"><span class="p-tag">Jacking Box Culvert</span><span class="p-tag">Open Cut</span><span class="p-tag">Flood Control</span></div>
           </div>
         </div>
-        <div class="photo-gallery" style="padding:16px; gap:8px; background:#f8fafc; border-top:1px solid var(--border);">
-          <div class="photo-thumb" onclick="openModal('images/water1.jpg','Site visit Manggarai')"><img src="images/water1.jpg" alt="Watergate 1"></div>
-          <div class="photo-thumb" onclick="openModal('images/water2.jpg','Jacking box culvert')"><img src="images/water2.jpg" alt="Watergate 2"></div>
-          <div class="photo-thumb" onclick="openModal('images/water3.jpg','Koordinasi lapangan')"><img src="images/water3.jpg" alt="Watergate 3"></div>
+        <div class="photo-gallery">
+          <div class="photo-thumb" onclick="openModal('images/water1.jpg','Pintu Air Manggarai')"><img src="images/water1.jpg" alt="Water 1"></div>
+          <div class="photo-thumb" onclick="openModal('images/water2.jpg','Jacking box culvert')"><img src="images/water2.jpg" alt="Water 2"></div>
+          <div class="photo-thumb" onclick="openModal('images/water3.jpg','Koordinasi lapangan')"><img src="images/water3.jpg" alt="Water 3"></div>
         </div>
       </div>
 
@@ -408,24 +286,17 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
         <div class="project-header">
           <div class="project-num">02</div>
           <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fas fa-map-marker-alt"></i> Jakarta Selatan</span>
-              <span><i class="fas fa-calendar"></i> 2015–2017</span>
-              <span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span>
-            </div>
+            <div class="project-meta"><span><i class="fas fa-map-marker-alt"></i> Jakarta Selatan</span><span><i class="fas fa-calendar"></i> 2015–2017</span><span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span></div>
             <div class="project-value"><i class="fas fa-coins"></i> Rp 287.500.000.000</div>
             <div class="project-title">Jalan Layang Khusus Busway Kapten Tendean – Blok M – Ciledug (Paket Trunojoyo)</div>
             <div class="project-desc">Flyover 1.206 m dengan metode bored pile diameter 1.2m dan balance cantilever menggunakan precast segmental dan launching gantry.</div>
-            <div class="project-tags">
-              <span class="p-tag">Bored Pile</span><span class="p-tag">Balance Cantilever</span>
-              <span class="p-tag">Precast Segmental</span><span class="p-tag">Launching Gantry</span>
-            </div>
+            <div class="project-tags"><span class="p-tag">Bored Pile</span><span class="p-tag">Balance Cantilever</span><span class="p-tag">Precast Segmental</span></div>
           </div>
         </div>
-        <div class="photo-gallery" style="padding:16px; gap:8px; background:#f8fafc; border-top:1px solid var(--border);">
-          <div class="photo-thumb" onclick="openModal('images/fly1.jpg','Pengecekan bored pile')"><img src="images/fly1.jpg" alt="Flyover 1"></div>
-          <div class="photo-thumb" onclick="openModal('images/fly2.jpg','Launching gantry flyover')"><img src="images/fly2.jpg" alt="Flyover 2"></div>
-          <div class="photo-thumb" onclick="openModal('images/fly3.jpg','Progres konstruksi flyover')"><img src="images/fly3.jpg" alt="Flyover 3"></div>
+        <div class="photo-gallery">
+          <div class="photo-thumb" onclick="openModal('images/fly1.jpg','Bored pile flyover')"><img src="images/fly1.jpg" alt="Fly 1"></div>
+          <div class="photo-thumb" onclick="openModal('images/fly2.jpg','Launching gantry')"><img src="images/fly2.jpg" alt="Fly 2"></div>
+          <div class="photo-thumb" onclick="openModal('images/fly3.jpg','Progres konstruksi')"><img src="images/fly3.jpg" alt="Fly 3"></div>
         </div>
       </div>
 
@@ -433,24 +304,17 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
         <div class="project-header">
           <div class="project-num">03</div>
           <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fas fa-map-marker-alt"></i> Jakarta Selatan</span>
-              <span><i class="fas fa-calendar"></i> 2017–2018</span>
-              <span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span>
-            </div>
+            <div class="project-meta"><span><i class="fas fa-map-marker-alt"></i> Jakarta Selatan</span><span><i class="fas fa-calendar"></i> 2017–2018</span><span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span></div>
             <div class="project-value"><i class="fas fa-coins"></i> Rp 118.000.000.000</div>
             <div class="project-title">Underpass Matraman – Salemba</div>
             <div class="project-desc">Pembangunan underpass untuk mendukung jaringan TransJakarta. Technical drafting, site support, material planning, dan koordinasi site engineer multi-departemen.</div>
-            <div class="project-tags">
-              <span class="p-tag">Underpass</span><span class="p-tag">TransJakarta</span>
-              <span class="p-tag">Site Support</span><span class="p-tag">Material Planning</span>
-            </div>
+            <div class="project-tags"><span class="p-tag">Underpass</span><span class="p-tag">TransJakarta</span><span class="p-tag">Material Planning</span></div>
           </div>
         </div>
-        <div class="photo-gallery" style="padding:16px; gap:8px; background:#f8fafc; border-top:1px solid var(--border);">
-          <div class="photo-thumb" onclick="openModal('images/under1.jpg','Dokumentasi underpass')"><img src="images/under1.jpg" alt="Underpass 1"></div>
-          <div class="photo-thumb" onclick="openModal('images/under2.jpg','Koordinasi tim underpass')"><img src="images/under2.jpg" alt="Underpass 2"></div>
-          <div class="photo-thumb" onclick="openModal('images/under3.jpg','Pengecekan drawing underpass')"><img src="images/under3.jpg" alt="Underpass 3"></div>
+        <div class="photo-gallery">
+          <div class="photo-thumb" onclick="openModal('images/under1.jpg','Underpass Matraman')"><img src="images/under1.jpg" alt="Under 1"></div>
+          <div class="photo-thumb" onclick="openModal('images/under2.jpg','Koordinasi tim')"><img src="images/under2.jpg" alt="Under 2"></div>
+          <div class="photo-thumb" onclick="openModal('images/under3.jpg','Pengecekan drawing')"><img src="images/under3.jpg" alt="Under 3"></div>
         </div>
       </div>
 
@@ -458,22 +322,15 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
         <div class="project-header">
           <div class="project-num">04</div>
           <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fas fa-map-marker-alt"></i> Jakarta Selatan</span>
-              <span><i class="fas fa-calendar"></i> 2018–2019</span>
-              <span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span>
-            </div>
+            <div class="project-meta"><span><i class="fas fa-map-marker-alt"></i> Jakarta Selatan</span><span><i class="fas fa-calendar"></i> 2018–2019</span><span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span></div>
             <div class="project-value"><i class="fas fa-coins"></i> Rp 163.200.000.000</div>
             <div class="project-title">Fly Over Tapal Kuda Tanjung Barat</div>
             <div class="project-desc">Pembangunan fly over dengan koordinasi lapangan intensif dan dukungan drafting teknis untuk struktur jembatan layang perkotaan.</div>
-            <div class="project-tags">
-              <span class="p-tag">Flyover</span><span class="p-tag">Urban Infrastructure</span>
-              <span class="p-tag">Technical Drafting</span>
-            </div>
+            <div class="project-tags"><span class="p-tag">Flyover</span><span class="p-tag">Urban Infrastructure</span><span class="p-tag">Technical Drafting</span></div>
           </div>
         </div>
-        <div class="photo-gallery" style="padding:16px; gap:8px; background:#f8fafc; border-top:1px solid var(--border);">
-          <div class="photo-thumb" onclick="openModal('images/tapal1.jpg','Fly over Tapal Kuda')"><img src="images/tapal1.jpg" alt="Tapal 1"></div>
+        <div class="photo-gallery">
+          <div class="photo-thumb" onclick="openModal('images/tapal1.jpg','Fly Over Tapal Kuda')"><img src="images/tapal1.jpg" alt="Tapal 1"></div>
           <div class="photo-thumb" onclick="openModal('images/tapal2.jpg','Koordinasi lapangan')"><img src="images/tapal2.jpg" alt="Tapal 2"></div>
           <div class="photo-thumb" onclick="openModal('images/tapal3.jpg','Progres konstruksi')"><img src="images/tapal3.jpg" alt="Tapal 3"></div>
         </div>
@@ -483,24 +340,17 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
         <div class="project-header">
           <div class="project-num">05</div>
           <div class="project-body">
-            <div class="project-meta">
-              <span><i class="fas fa-map-marker-alt"></i> Jakarta Pusat</span>
-              <span><i class="fas fa-calendar"></i> 2019–2021</span>
-              <span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span>
-            </div>
+            <div class="project-meta"><span><i class="fas fa-map-marker-alt"></i> Jakarta Pusat</span><span><i class="fas fa-calendar"></i> 2019–2021</span><span><i class="fas fa-building"></i> PT Jaya Konstruksi MP, Tbk</span></div>
             <div class="project-value"><i class="fas fa-coins"></i> Rp 180.000.000.000</div>
             <div class="project-title">Peningkatan Jalan dan Jalur Pedestrian Sudirman – Thamrin</div>
             <div class="project-desc">Peningkatan koridor utama Jakarta dengan fasilitas pedestrian ramah disabilitas. Dukungan drafting, dokumentasi konstruksi, dan koordinasi lapangan.</div>
-            <div class="project-tags">
-              <span class="p-tag">Road Improvement</span><span class="p-tag">Pedestrian</span>
-              <span class="p-tag">Accessibility</span><span class="p-tag">Urban Design</span>
-            </div>
+            <div class="project-tags"><span class="p-tag">Road Improvement</span><span class="p-tag">Pedestrian</span><span class="p-tag">Accessibility</span></div>
           </div>
         </div>
-        <div class="photo-gallery" style="padding:16px; gap:8px; background:#f8fafc; border-top:1px solid var(--border);">
-          <div class="photo-thumb" onclick="openModal('images/ped1.jpg','Pedestrian Sudirman-Thamrin')"><img src="images/ped1.jpg" alt="Ped 1"></div>
-          <div class="photo-thumb" onclick="openModal('images/ped2.jpg','Koordinasi lapangan pedestrian')"><img src="images/ped2.jpg" alt="Ped 2"></div>
-          <div class="photo-thumb" onclick="openModal('images/ped3.jpg','Fasilitas ramah disabilitas')"><img src="images/ped3.jpg" alt="Ped 3"></div>
+        <div class="photo-gallery">
+          <div class="photo-thumb" onclick="openModal('images/ped1.jpg','Pedestrian Sudirman')"><img src="images/ped1.jpg" alt="Ped 1"></div>
+          <div class="photo-thumb" onclick="openModal('images/ped2.jpg','Koordinasi lapangan')"><img src="images/ped2.jpg" alt="Ped 2"></div>
+          <div class="photo-thumb" onclick="openModal('images/ped3.jpg','Fasilitas pedestrian')"><img src="images/ped3.jpg" alt="Ped 3"></div>
         </div>
       </div>
 
@@ -523,8 +373,7 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
           <li>Menyiapkan shop drawing, as-built drawing, dan working method drawings</li>
           <li>Koordinasi dengan kontraktor untuk pelaksanaan konstruksi</li>
           <li>Site inspection dan quality control assessment</li>
-          <li>Technical documentation dan measurement support untuk senior engineers</li>
-          <li>Supervisi konstruksi sesuai design specification dan safety standards</li>
+          <li>Technical documentation dan supervisi konstruksi sesuai design specification</li>
         </ul>
       </div>
       <div class="exp-item">
@@ -547,7 +396,6 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
           <li>Menyiapkan shop drawing, as-built drawing, method statement, dan estimasi</li>
           <li>Koordinasi tim 10–20 orang lintas fungsi di setiap proyek</li>
           <li>Semua proyek selesai on time dan on budget</li>
-          <li>Site inspection, quality control, dan koordinasi dengan konsultan pengawas</li>
         </ul>
       </div>
     </div>
@@ -560,34 +408,10 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
     <div class="section-tag">Credentials</div>
     <div class="section-title">CERTIFICATIONS</div>
     <div class="cert-grid">
-      <div class="cert-card">
-        <div class="cert-icon"><i class="fas fa-water"></i></div>
-        <div>
-          <div class="cert-name">Young Expert in Water Resources Engineering</div>
-          <div class="cert-body">Certificate of Competence (SKA Ahli Muda) — Sertifikasi kompetensi resmi di bidang Teknik Sumber Daya Air</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><i class="fas fa-drafting-compass"></i></div>
-        <div>
-          <div class="cert-name">AutoCAD 2D Certified</div>
-          <div class="cert-body">Sertifikasi kompetensi AutoCAD 2D — diaplikasikan di seluruh proyek infrastruktur skala besar</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
-        <div>
-          <div class="cert-name">S1 Teknik Sipil</div>
-          <div class="cert-body">Universitas Muhammadiyah Jakarta — Bachelor of Civil Engineering</div>
-        </div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon"><i class="fas fa-language"></i></div>
-        <div>
-          <div class="cert-name">Professional Working Proficiency</div>
-          <div class="cert-body">Indonesian (Native) · English (Professional Working) — pengalaman koordinasi dengan tim joint venture internasional (Shimizu)</div>
-        </div>
-      </div>
+      <div class="cert-card"><div class="cert-icon"><i class="fas fa-water"></i></div><div><div class="cert-name">Young Expert in Water Resources Engineering</div><div class="cert-body">Certificate of Competence (SKA Ahli Muda) — Sertifikasi kompetensi resmi di bidang Teknik Sumber Daya Air</div></div></div>
+      <div class="cert-card"><div class="cert-icon"><i class="fas fa-drafting-compass"></i></div><div><div class="cert-name">AutoCAD 2D Certified</div><div class="cert-body">Sertifikasi kompetensi AutoCAD 2D — diaplikasikan di seluruh proyek infrastruktur skala besar</div></div></div>
+      <div class="cert-card"><div class="cert-icon"><i class="fas fa-graduation-cap"></i></div><div><div class="cert-name">S1 Teknik Sipil</div><div class="cert-body">Universitas Muhammadiyah Jakarta — Bachelor of Civil Engineering</div></div></div>
+      <div class="cert-card"><div class="cert-icon"><i class="fas fa-language"></i></div><div><div class="cert-name">Professional Working Proficiency</div><div class="cert-body">Indonesian (Native) · English (Professional Working) — pengalaman koordinasi dengan tim joint venture internasional (Shimizu)</div></div></div>
     </div>
   </div>
 </section>
@@ -607,10 +431,9 @@ footer { background: #060e1a; text-align: center; padding: 24px; font-size: 12px
 
 <footer>© 2025 Dinar Faisal Ramadhan — Civil Engineer & Infrastructure Specialist</footer>
 
-<!-- LIGHTBOX -->
 <div id="modal" class="modal" onclick="closeModal()">
   <span class="modal-close" onclick="closeModal()">&times;</span>
-  <div class="modal-content" id="modal-content">
+  <div class="modal-content">
     <img id="modal-img" src="" alt="">
     <div id="modal-caption" class="modal-caption"></div>
   </div>
@@ -630,113 +453,153 @@ function downloadCV() {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
   const pw = doc.internal.pageSize.getWidth();
+  const ph = doc.internal.pageSize.getHeight();
   const navy = [10, 22, 40], yellow = [245, 197, 24], blue = [26, 79, 214];
   const white = [255, 255, 255], muted = [100, 116, 139], ink = [15, 23, 42];
+  const margin = 15;
 
+  function checkPageBreak(yPos, needed) {
+    if (yPos + needed > ph - 20) {
+      doc.addPage();
+      // Footer on new page
+      doc.setFillColor(...navy);
+      doc.rect(0, ph - 12, pw, 12, 'F');
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(7);
+      doc.setTextColor(...yellow);
+      doc.text('Dinar Faisal Ramadhan  ·  dinar.chon@gmail.com  ·  +62 857-1730-2135', pw / 2, ph - 4, { align: 'center' });
+      return margin + 5;
+    }
+    return yPos;
+  }
+
+  function secTitle(title, yPos) {
+    yPos = checkPageBreak(yPos, 16);
+    doc.setFillColor(...navy);
+    doc.rect(margin, yPos, 3, 6, 'F');
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(11);
+    doc.setTextColor(...navy);
+    doc.text(title, margin + 6, yPos + 5);
+    doc.setDrawColor(...yellow);
+    doc.setLineWidth(0.5);
+    doc.line(margin, yPos + 8, pw - margin, yPos + 8);
+    return yPos + 14;
+  }
+
+  // ── PAGE 1 HEADER ──
   doc.setFillColor(...navy);
-  doc.rect(0, 0, pw, 42, 'F');
+  doc.rect(0, 0, pw, 40, 'F');
   doc.setFillColor(...yellow);
-  doc.rect(0, 42, pw, 3, 'F');
+  doc.rect(0, 40, pw, 3, 'F');
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(22);
   doc.setTextColor(...white);
-  doc.text('DINAR FAISAL RAMADHAN', 20, 18);
+  doc.text('DINAR FAISAL RAMADHAN', margin, 16);
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
   doc.setTextColor(...yellow);
-  doc.text('Civil Engineer  ·  Infrastructure Specialist  ·  13+ Years Experience', 20, 27);
+  doc.text('Civil Engineer  ·  Infrastructure Specialist  ·  13+ Years Experience', margin, 25);
   doc.setFontSize(9);
   doc.setTextColor(180, 190, 210);
-  doc.text('dinar.chon@gmail.com   |   +62 857-1730-2135   |   Bogor, Jawa Barat', 20, 35);
+  doc.text('dinar.chon@gmail.com   |   +62 857-1730-2135   |   Bogor, Jawa Barat', margin, 34);
 
-  let y = 54;
+  let y = 52;
+
+  // Stats bar
   doc.setFillColor(245, 248, 252);
-  doc.rect(15, y, pw - 30, 22, 'F');
-  const stats = [['13+ TAHUN','Pengalaman'],['Rp 956B+','Total Project Value'],['5+','Proyek Besar'],['10-20','Tim per Proyek']];
+  doc.rect(margin, y, pw - margin * 2, 20, 'F');
+  const stats = [['13+ TAHUN', 'Pengalaman'], ['Rp 956B+', 'Total Project Value'], ['5+', 'Proyek Besar'], ['10-20', 'Tim per Proyek']];
   stats.forEach((s, i) => {
-    const x = 20 + i * 47;
-    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(...navy); doc.text(s[0], x, y+10);
-    doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...muted); doc.text(s[1], x, y+16);
+    const x = margin + 5 + i * 46;
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(...navy); doc.text(s[0], x, y + 9);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(...muted); doc.text(s[1], x, y + 15);
   });
-  y += 30;
+  y += 28;
 
-  function secTitle(title, yPos) {
-    doc.setFillColor(...navy); doc.rect(15, yPos, 3, 6, 'F');
-    doc.setFont('helvetica','bold'); doc.setFontSize(11); doc.setTextColor(...navy); doc.text(title, 21, yPos+5);
-    doc.setDrawColor(...yellow); doc.setLineWidth(0.5); doc.line(15, yPos+8, pw-15, yPos+8);
-    return yPos+13;
-  }
-
+  // Summary
   y = secTitle('PROFESSIONAL SUMMARY', y);
-  doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...ink);
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(...ink);
   const sum = 'Civil Engineer dengan 13 tahun pengalaman di proyek infrastruktur besar Jakarta — flyover, underpass, normalisasi sungai, dan peningkatan jalan. Total nilai proyek Rp 956 Miliar+, seluruhnya on time dan on budget. Berpengalaman dalam estimasi akurat, construction supervision, dan koordinasi tim 10–20 orang. Menargetkan posisi Division Head Bidang Infrastruktur, Jalan dan Jembatan.';
-  const sl = doc.splitTextToSize(sum, pw-30); doc.text(sl, 15, y); y += sl.length*4.5+8;
+  const sl = doc.splitTextToSize(sum, pw - margin * 2);
+  y = checkPageBreak(y, sl.length * 4.5 + 8);
+  doc.text(sl, margin, y);
+  y += sl.length * 4.5 + 8;
 
-  y = secTitle('WHAT I BRING', y);
-  const vp = [
-    '✓ Estimasi Akurat & Anggaran Terjaga — 5 proyek besar, zero cost overrun',
-    '✓ Delivery On Schedule — track record konsisten sesuai milestone di proyek kompleks',
-    '✓ Paham Lapangan End-to-End — dari drafting hingga supervisi, keputusan berbasis pengalaman nyata',
-  ];
-  vp.forEach(v => {
-    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...ink);
-    const vl = doc.splitTextToSize(v, pw-30); doc.text(vl, 15, y); y += vl.length*4.5+3;
-  });
-  y += 4;
-
+  // Experience
   y = secTitle('PENGALAMAN KERJA', y);
   const exps = [
-    { period:'Oktober 2022 – Sekarang', title:'Mill Highlight & System Officer', company:'PT Union Sampoerna Triputra Persada', bullets:['Shop drawing, as-built, working method drawings','Koordinasi kontraktor, site inspection, quality control','Technical documentation dan supervisi konstruksi'] },
-    { period:'Oktober 2021 – Oktober 2022', title:'CAD Operator', company:'Shimizu Adhi Karya Joint Venture', bullets:['Design engineer detail untuk proyek joint venture Jepang-Indonesia','Koordinasi teknis dengan konsultan internasional'] },
-    { period:'Januari 2013 – September 2021', title:'Drafter — Technical & Project Support', company:'PT Jaya Konstruksi MP, Tbk', bullets:['5 proyek infrastruktur besar Jakarta, total Rp 956 Miliar+ (on time & on budget)','Shop drawing, as-built, method statement, estimasi, QS','Koordinasi tim 10–20 orang, multi-stakeholder management'] },
+    { period: 'Oktober 2022 – Sekarang', title: 'Mill Highlight & System Officer (Mill Drafter Officer)', company: 'PT Union Sampoerna Triputra Persada', bullets: ['Shop drawing, as-built drawing, dan working method drawings', 'Koordinasi kontraktor, site inspection, quality control assessment', 'Technical documentation dan supervisi konstruksi'] },
+    { period: 'Oktober 2021 – Oktober 2022', title: 'CAD Operator', company: 'Shimizu Adhi Karya Joint Venture', bullets: ['Design engineer detail untuk proyek joint venture Jepang-Indonesia', 'Koordinasi teknis dengan konsultan dan tim engineering internasional'] },
+    { period: 'Januari 2013 – September 2021', title: 'Drafter — Technical & Project Support', company: 'PT Jaya Konstruksi MP, Tbk', bullets: ['5 proyek infrastruktur besar Jakarta, total Rp 956 Miliar+ (on time & on budget)', 'Shop drawing, as-built, method statement, estimasi, quantity surveying', 'Koordinasi tim 10–20 orang lintas fungsi di setiap proyek'] },
   ];
   exps.forEach(e => {
-    doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(...navy); doc.text(e.title, 15, y);
-    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...blue); doc.text(e.period, pw-15, y, {align:'right'});
+    y = checkPageBreak(y, 28);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(...navy); doc.text(e.title, margin, y);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(...blue); doc.text(e.period, pw - margin, y, { align: 'right' });
     y += 5;
-    doc.setFont('helvetica','italic'); doc.setTextColor(...muted); doc.text(e.company, 15, y); y += 5;
+    doc.setFont('helvetica', 'italic'); doc.setTextColor(...muted); doc.text(e.company, margin, y); y += 5;
     e.bullets.forEach(b => {
-      doc.setFont('helvetica','normal'); doc.setTextColor(...ink); doc.text('•', 17, y);
-      const bl = doc.splitTextToSize(b, pw-36); doc.text(bl, 22, y); y += bl.length*4.5;
+      y = checkPageBreak(y, 8);
+      doc.setFont('helvetica', 'normal'); doc.setTextColor(...ink); doc.text('•', margin + 2, y);
+      const bl = doc.splitTextToSize(b, pw - margin * 2 - 10); doc.text(bl, margin + 7, y); y += bl.length * 4.5;
     });
     y += 5;
   });
 
+  // Projects
   y = secTitle('PROYEK UNGGULAN', y);
   const projs = [
-    ['Pintu Air Manggarai & Karet — Normalisasi Kali Ciliwung','Rp 207.199.987.000','2013–2015'],
-    ['Jalan Layang Busway Kapten Tendean – Blok M – Ciledug','Rp 287.500.000.000','2015–2017'],
-    ['Underpass Matraman – Salemba','Rp 118.000.000.000','2017–2018'],
-    ['Fly Over Tapal Kuda Tanjung Barat','Rp 163.200.000.000','2018–2019'],
-    ['Peningkatan Jalan & Pedestrian Sudirman – Thamrin','Rp 180.000.000.000','2019–2021'],
+    ['Pintu Air Manggarai & Karet — Normalisasi Kali Ciliwung', 'Rp 207.199.987.000', '2013–2015'],
+    ['Jalan Layang Busway Kapten Tendean – Blok M – Ciledug', 'Rp 287.500.000.000', '2015–2017'],
+    ['Underpass Matraman – Salemba', 'Rp 118.000.000.000', '2017–2018'],
+    ['Fly Over Tapal Kuda Tanjung Barat', 'Rp 163.200.000.000', '2018–2019'],
+    ['Peningkatan Jalan & Pedestrian Sudirman – Thamrin', 'Rp 180.000.000.000', '2019–2021'],
   ];
-  projs.forEach((p,i) => {
-    if(i%2===0){doc.setFillColor(248,250,252);doc.rect(15,y-3,pw-30,10,'F');}
-    doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(...navy);doc.text(p[0],17,y+3);
-    doc.setFont('helvetica','normal');doc.setTextColor(...blue);doc.text(p[1],pw-15,y+3,{align:'right'});
-    doc.setTextColor(...muted);doc.setFontSize(8);doc.text(p[2],17,y+7.5);
-    y+=12;
+  projs.forEach((p, i) => {
+    y = checkPageBreak(y, 12);
+    if (i % 2 === 0) { doc.setFillColor(248, 250, 252); doc.rect(margin, y - 2, pw - margin * 2, 11, 'F'); }
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(9); doc.setTextColor(...navy); doc.text(p[0], margin + 2, y + 4);
+    doc.setFont('helvetica', 'normal'); doc.setTextColor(...blue); doc.text(p[1], pw - margin, y + 4, { align: 'right' });
+    doc.setTextColor(...muted); doc.setFontSize(8); doc.text(p[2], margin + 2, y + 8.5);
+    y += 12;
   });
-  y+=4;
+  y += 4;
 
-  y = secTitle('SKILLS & SERTIFIKASI', y);
-  const skills = ['AutoCAD 2D & SketchUp','Shop/As-Built Drawing','Project Management','Construction Supervision','Quantity Surveying','Structural Analysis','Estimasi & Anggaran','Microsoft Office'];
-  let sx=15;
-  skills.forEach((s,i)=>{
-    doc.setFillColor(...navy);doc.roundedRect(sx,y,42,7,1,1,'F');
-    doc.setFont('helvetica','bold');doc.setFontSize(7.5);doc.setTextColor(...yellow);doc.text(s,sx+21,y+4.8,{align:'center'});
-    sx+=45; if(sx>pw-50){sx=15;y+=10;}
+  // Skills
+  y = secTitle('SKILLS', y);
+  const skills = ['AutoCAD 2D & SketchUp', 'Shop/As-Built Drawing', 'Project Management', 'Construction Supervision', 'Quantity Surveying', 'Structural Analysis', 'Estimasi & Anggaran', 'Microsoft Office'];
+  let sx = margin;
+  skills.forEach((s) => {
+    if (sx + 43 > pw - margin) { sx = margin; y += 10; }
+    y = checkPageBreak(y, 12);
+    doc.setFillColor(...navy); doc.roundedRect(sx, y, 41, 7, 1, 1, 'F');
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7); doc.setTextColor(...yellow);
+    doc.text(s, sx + 20.5, y + 4.8, { align: 'center' });
+    sx += 44;
   });
-  y+=14;
-  doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(...navy);doc.text('Sertifikasi:',15,y);
-  doc.setFont('helvetica','normal');doc.setTextColor(...ink);
-  doc.text('Young Expert in Water Resources Engineering (SKA Ahli Muda)  ·  AutoCAD 2D Certified',40,y);
-  y+=5;
-  doc.text('S1 Teknik Sipil — Universitas Muhammadiyah Jakarta  ·  Indonesian (Native)  ·  English (Professional Working)',15,y);
+  y += 14;
 
-  doc.setFillColor(...navy);doc.rect(0,282,pw,15,'F');
-  doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(...yellow);
-  doc.text('Dinar Faisal Ramadhan  ·  dinar.chon@gmail.com  ·  +62 857-1730-2135',pw/2,290,{align:'center'});
+  // Certifications
+  y = secTitle('SERTIFIKASI & PENDIDIKAN', y);
+  const certs = [
+    'Young Expert in Water Resources Engineering (SKA Ahli Muda)',
+    'AutoCAD 2D Certified',
+    'S1 Teknik Sipil — Universitas Muhammadiyah Jakarta',
+    'Indonesian (Native)  ·  English (Professional Working)',
+  ];
+  certs.forEach(c => {
+    y = checkPageBreak(y, 7);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(...ink);
+    doc.text('✓', margin + 2, y); doc.text(c, margin + 8, y);
+    y += 6;
+  });
+
+  // Footer page 1
+  doc.setFillColor(...navy);
+  doc.rect(0, ph - 12, pw, 12, 'F');
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(7); doc.setTextColor(...yellow);
+  doc.text('Dinar Faisal Ramadhan  ·  dinar.chon@gmail.com  ·  +62 857-1730-2135', pw / 2, ph - 4, { align: 'center' });
 
   doc.save('CV_Dinar_Faisal_Ramadhan.pdf');
 }
